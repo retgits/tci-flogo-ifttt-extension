@@ -1,0 +1,61 @@
+{
+    "name": "wi-ext-ifttt",
+    "title": "IFTTT WebHooks Connector",
+    "author": "retgits",
+    "type": "flogo:connector",
+    "version": "0.1.0",
+    "display": {
+      "description": "The IFTTT WebHooks Connector",
+      "category": "IFTTT",
+      "visible": true,
+      "smallIcon": "ifttt.png"
+    },
+    "ref": "github.com/retgits/wi-ifttt-extension/connector/ifttt",
+    "keyfield": "name",
+    "settings": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "display": {
+          "name": "Connection Name",
+          "description": "Name of the connection"
+        }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "display": {
+          "name": "Description",
+          "description": "Connection description"
+        }
+      },
+      {
+        "name": "webhookKey",
+        "type": "string",
+        "required": true,
+        "display": {
+          "name": "Key",
+          "description": "The Key for the WebHook",
+          "type": "password"
+        }
+      },
+      {
+        "name": "eventName",
+        "type": "string",
+        "required": true,
+        "display": {
+          "name": "Event",
+          "description": "The Event for the WebHook"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Connect",
+        "display": {
+          "readonly": true
+        }
+      }
+    ]
+  }

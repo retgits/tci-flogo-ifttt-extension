@@ -1,0 +1,48 @@
+{
+    "name": "webhook",
+    "title": "Send IFTTT WebHook",
+    "version": "0.1.0",
+    "type": "flogo:activity",
+    "author": "retgits",
+    "display": {
+        "category": "IFTTT",
+        "visible": true,
+        "smallIcon": "ifttt.png",
+        "description": "This activity sends a message to an IFTTT WebHook"
+    },
+    "ref": "github.com/retgits/wi-ifttt-extension/activity/ifttt",
+    "inputs": [
+        {
+            "name": "iftttConnection",
+            "type": "object",
+            "required": true,
+            "display":{
+              "name": "IFTTT Connection",
+              "description": "Select your IFTTT Connection",
+              "type": "connection"
+            },
+            "allowed":[]
+        },
+        {
+            "name": "value1",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value2",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value3",
+            "type": "string",
+            "required": true
+        }
+    ],
+    "outputs": [
+        {
+            "name": "result",
+            "type": "string"
+        }
+    ]
+}
