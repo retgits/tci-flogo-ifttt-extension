@@ -1,5 +1,5 @@
 # IFTTT extension for Flogo apps in TIBCO Cloud Integration
-An extension for TIBCO Cloud Integration - Web Integrator to connect Web Integrator Apps to IFTT and do amazing things.
+An extension for TIBCO Cloud Integration - Flogo to connect Flogo Apps to IFTT and do amazing things.
 
 ## Using the extension
 In order to work with this extension you'll need to enable the `WebHooks` service on [IFTTT](https://ifttt.com/maker_webhooks). The connector takes two inputs:
