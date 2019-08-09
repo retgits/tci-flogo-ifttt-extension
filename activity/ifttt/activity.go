@@ -25,9 +25,9 @@ const (
 // Payload is used to describe the payload to IFTTT with a maximum of
 // three values (this limit is set by IFTTT)
 type Payload struct {
-	Value1 string `json:"value1"`
-	Value2 string `json:"value2"`
-	Value3 string `json:"value3"`
+	Value1 string `json:"value1,omitempty"`
+	Value2 string `json:"value2,omitempty"`
+	Value3 string `json:"value3,omitempty"`
 }
 
 // activityLog is the default logger for this class
@@ -85,13 +85,12 @@ func (a *IFTTTActivity) Eval(context activity.Context) (done bool, err error) {
 	var iftttURL = str.String()
 	activityLog.Info("The WebHook URL is set to " + iftttURL)
 
-	// Create JSON payload. The data is completely optional, and you can also pass value1, value2, and value3 as query parameters or form variables. This content will be passed on to the Action in your Recipe.
-	var data Payload
-
-	if context.GetInput(ivValue3) == nil {
-		data = Payload{Value1: context.GetInput(ivValue1).(string), Value2: context.GetInput(ivValue2).(string)}
-	} else if context.GetInput(ivValue2) == nil {
-		data = Payload{Value1: context.GetInput(ivValue1).(string)}
+	// Create JSON payload. The data is completely optional, and you can also pass value1, value2, and value3 as query parameters or form variables.
+	// This content will be passed on to the Action in your Recipe.
+	data := Payload{
+		Value1: context.GetInput(ivValue1).(string),
+		Value2: context.GetInput(ivValue2).(string),
+		Value3: context.GetInput(ivValue3).(string),
 	}
 
 	payloadBytes, err := json.Marshal(data)
