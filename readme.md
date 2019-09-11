@@ -1,4 +1,7 @@
 # IFTTT extension for Flogo apps in TIBCO Cloud Integration
+
+_This repository is archived and the code is no longer maintained. A newer version of this activity can be found [here](https://github.com/retgits/flogo-components/tree/master/activity/iftttwebhook)_
+
 An extension for TIBCO Cloud Integration - Flogo to connect Flogo Apps to IFTT and do amazing things.
 
 ## Using the extension
